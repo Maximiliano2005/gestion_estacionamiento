@@ -1,10 +1,16 @@
-import { Container } from 'react-bootstrap';
+import {Sidebar} from '../components/layout/Sidebar';
 
-export function DashboardPage() {
-  return (
-    <Container className="mt-5">
-      <h2>Dashboard de Estacionamientos</h2>
-      <p>Aquí irá tu mapa y tus estadísticas.</p>
-    </Container>
-  );
+export function DashboardPage(){
+    return (
+        <div className='container-fluid p-0'>
+            <div className='row'>
+                <div className='col-2'>
+                    <Sidebar/>
+                </div>
+                <div className='bg-secondary col-10'>
+                    Aqui ira el contenido central
+                </div>
+            </div>
+        </div>
+    );
 }
