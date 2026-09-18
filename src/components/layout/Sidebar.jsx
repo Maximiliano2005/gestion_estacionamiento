@@ -21,6 +21,7 @@ export function Sidebar() {
             <div>
                 <Nav className='flex-column gap-2 p-3' variant='pills'>
                     <Nav.Link active={ubication.pathname === '/dashboard'} className='text-white' as={Link} to={'/dashboard'}>Dashboard</Nav.Link>
+                    <Nav.Link active={ubication.pathname === '/registrar'} className='text-white' as={Link} to={'/registrar'}>Registrar</Nav.Link>
                     <Nav.Link active={ubication.pathname === '/estacionamiento'} className='text-white' as={Link} to={'/estacionamiento'}>Estacionamiento</Nav.Link>
                     <Nav.Link active={ubication.pathname === '/historial'} className='text-white' as={Link} to={'/historial'}>Historial</Nav.Link>
                 </Nav>
