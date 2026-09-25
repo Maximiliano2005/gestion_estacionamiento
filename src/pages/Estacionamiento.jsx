@@ -1,15 +1,11 @@
-export const espaciosSectorA = [
-    { id: 1, nombre: "A1", estado: "libre" },
-    { id: 2, nombre: "A2", estado: "reservado" },
-    { id: 3, nombre: "A3", estado: "libre" },
-    { id: 4, nombre: "A4", estado: "ocupado" },
-    { id: 5, nombre: "A5", estado: "mantenimiento" },
-    { id: 6, nombre: "A6", estado: "mantenimiento" }
-];
+import { useState } from 'react';
+import datos from '../datos.json';
 
 
 export function Estacionamiento(){
     
+    const [sectorActivo, setSectorActivo] = useState('espaciosSectorA');  
+
     function obtenerColor(estado){
         if(estado == 'libre'){
             return 'bg-success'
@@ -24,10 +20,23 @@ export function Estacionamiento(){
 
     return(
         <div>
-            <h3 className="mb-3 fw-bold text-secondary">Sector A</h3>
+            
+            <div className='mb-4'>
+                <div className='btn btn-primary me-2' onClick={() => setSectorActivo('espaciosSectorA')}>
+                    Ver sector A
+                </div>
+                <div className='btn btn-primary me-2' onClick={() => setSectorActivo('espaciosSectorB')}>
+                    Ver sector B
+                </div>
+
+                <h3 className="mb-3 fw-bold text-secondary">
+                    Mostrando: {sectorActivo}
+                </h3>
+            </div>
+
 
             <div className='row g-3'>
-                {espaciosSectorA.map((espacio) => (
+                {datos[sectorActivo].map((espacio) => (
                     
                     <div key={espacio.id} className="col-2 col-md-1 col-lg-2">
                         <div
@@ -40,29 +49,7 @@ export function Estacionamiento(){
                     </div>
                 ))}
             </div>
+            
         </div>
     );
-}
-
-export function TotalEspacios(){
-    return espaciosSectorA.length;
-}
-export function EspacioLibre() {
-    const libres = espaciosSectorA.filter((espacio) => espacio.estado === "libre");
-    return libres.length;
-}
-
-export function EspacioOcupado(){
-    const ocupado = espaciosSectorA.filter((espacio) => espacio.estado === 'ocupado');
-    return ocupado.length;
-}
-
-export function Reservado(){
-    const reservado = espaciosSectorA.filter((espacio) => espacio.estado == 'reservado');
-    return reservado.length;
-}
-
-export function Mantenimiento(){
-    const mantencion = espaciosSectorA.filter((espacio) => espacio.estado == 'mantenimiento');
-    return mantencion.length;
 }
