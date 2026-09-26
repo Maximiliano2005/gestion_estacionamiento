@@ -38,7 +38,7 @@ export function Estacionamiento(){
             <div className='row g-3'>
                 {datos[sectorActivo].map((espacio) => (
                     
-                    <div key={espacio.id} className="col-2 col-md-1 col-lg-2">
+                    <div key={espacio.id} className="col-4 col-md-1 col-lg-2">
                         <div
                             className={`text-white rounded-3 p-3 d-flex justify-content-center 
                             align-items-center shadow-sm ${obtenerColor(espacio.estado)}`}
