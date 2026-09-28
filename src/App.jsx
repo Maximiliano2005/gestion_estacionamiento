@@ -21,7 +21,7 @@ function App() {
         <Route element={<Layout/>}>
           <Route path='/dashboard' element={<DashboardPage />} />
           <Route path='/estacionamiento' element={<Estacionamiento />} />
-          <Route path='/historial' element={<Historial />} />
+          {/* <Route path='/historial' element={<Historial />} /> */}
           <Route path='/registrar' element={<Registrar />} />
         
         

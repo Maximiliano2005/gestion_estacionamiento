@@ -23,12 +23,12 @@ export function Sidebar() {
                     <Nav.Link active={ubication.pathname === '/dashboard'} className='text-white' as={Link} to={'/dashboard'}>Dashboard</Nav.Link>
                     <Nav.Link active={ubication.pathname === '/registrar'} className='text-white' as={Link} to={'/registrar'}>Registrar</Nav.Link>
                     <Nav.Link active={ubication.pathname === '/estacionamiento'} className='text-white' as={Link} to={'/estacionamiento'}>Estacionamiento</Nav.Link>
-                    <Nav.Link active={ubication.pathname === '/historial'} className='text-white' as={Link} to={'/historial'}>Historial</Nav.Link>
+                    {/* <Nav.Link active={ubication.pathname === '/historial'} className='text-white' as={Link} to={'/historial'}>Historial</Nav.Link> */}
                 </Nav>
             </div>
-            <div className="mt-auto">
+            {/* <div className="mt-auto">
                 Perfil
-            </div>
+            </div> */}
         </div>
     );
 }

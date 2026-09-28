@@ -84,7 +84,7 @@ export function Estacionamiento() {
             </div>
 
             {/* Espacios del estacionamiento */}
-            <div className="row g-3">
+            <div className="row gap-2">
 
                 {datos[sectorActivo]?.map((espacio) => (
                     <div
@@ -92,13 +92,9 @@ export function Estacionamiento() {
                         onClick={() =>
                             handleClicEspacio(espacio)
                         }
-                        className={`text-white rounded-3 p-3 d-flex justify-content-center align-items-center shadow-sm ${obtenerColor(
+                        className={`text-white rounded-3 p-3 d-flex justify-content-center align-items-center col-2 col-md-3 col-lg-2 shadow-sm  ${obtenerColor(
                             espacio.estado
                         )}`}
-                        style={{
-                            height: "80px",
-                            cursor: "pointer"
-                        }}
                     >
                         {espacio.nombre}
                     </div>

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { BsHouseDoorFill, BsClockHistory, BsPCircle } from "react-icons/bs";
+import { BsHouseDoorFill, BsPCircle, BsClipboardCheck } from "react-icons/bs";
 
 
 export function BottomNav(){
@@ -20,11 +20,12 @@ export function BottomNav(){
                     Estacionamiento
                 </span>
             </NavLink>
-            <NavLink className={({ isActive }) => isActive ? "d-flex flex-column align-items-center text-decoration-none text-primary" : "d-flex flex-column align-items-center text-decoration-none text-secondary" } to="/historial">
+            <NavLink className={({ isActive }) => isActive ? "d-flex flex-column align-items-center text-decoration-none text-primary" : "d-flex flex-column align-items-center text-decoration-none text-secondary" } to="/registrar">
                 
-                <BsClockHistory size={24} className="mb-1" />
+                <BsClipboardCheck size={24} className="mb-1" />
+
                 <span style={{ fontSize: '12px' }}> 
-                    Historial
+                    Registrar
                 </span>
             </NavLink>
         </div>
