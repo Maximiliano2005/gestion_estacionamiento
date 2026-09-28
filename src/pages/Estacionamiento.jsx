@@ -92,7 +92,7 @@ export function Estacionamiento() {
                         onClick={() =>
                             handleClicEspacio(espacio)
                         }
-                        className={`text-white rounded-3 p-3 d-flex justify-content-center align-items-center col-2 col-md-3 col-lg-2 shadow-sm  ${obtenerColor(
+                        className={`text-white rounded-3 p-3 d-flex justify-content-center align-items-center col-2 col-md-3 col-lg-2 shadow-sm btn ${obtenerColor(
                             espacio.estado
                         )}`}
                     >
