@@ -34,7 +34,7 @@ export function LoginPage() {
           <p className="text-center text-muted mb-4">Gestión de Estacionamientos</p>
 
           <Form onSubmit={iniciarSesion}>
-            {/* Campo Correo */}
+            {/* campo correo */}
             <Form.Group className="mb-3" controlId="formCorreo">
               <Form.Label>Correo electrónico</Form.Label>
               <Form.Control
@@ -45,7 +45,7 @@ export function LoginPage() {
               />
             </Form.Group>
 
-            {/* Campo Contraseña */}
+            {/* campo contraseña */}
             <Form.Group className="mb-3" controlId="formPassword">
               <Form.Label>Contraseña</Form.Label>
               <Form.Control
@@ -56,7 +56,7 @@ export function LoginPage() {
               />
             </Form.Group>
 
-            {/* Botón de envío */}
+            {/* boton de envio */}
             <Button variant="primary" type="submit" className="w-100 mt-2">
               Ingresar al Sistema
             </Button>
